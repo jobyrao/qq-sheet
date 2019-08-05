@@ -6,7 +6,7 @@
   "scripts": {
     "cnpm": "npm i --registry=https://registry.npm.taobao.org",
     "eslint": "eslint .",
-    "test": "mocha -t 5000 -s 1000 test/*.test.js",
+    "test": "mocha -t 10000 -s 2000 test/*.test.js",
     "test-cover": "nyc npm run test",
     "test-travis": "nyc npm run test && nyc report --reporter=text-lcov | coveralls"
   },
