@@ -1,0 +1,43 @@
+{
+  "name": "qq-sheet",
+  "version": "0.0.1",
+  "description": "qq excel parse, qq sheet parse, qq xlsx",
+  "main": "lib/index.js",
+  "scripts": {
+    "cnpm": "npm i --registry=https://registry.npm.taobao.org",
+    "eslint": "eslint .",
+    "test": "mocha -t 5000 -s 1000 test/*.test.js",
+    "test-cover": "nyc npm run test",
+    "test-travis": "nyc npm run test && nyc report --reporter=text-lcov | coveralls"
+  },
+  "keywords": [
+    "qq",
+    "excel",
+    "sheet",
+    "xlsx",
+    "docs"
+  ],
+  "author": "diyao<raojianb@mail2.sysu.edu.cn;raojianb@gmail.com>",
+  "homepage": "https://github.com/diyao/qq-sheet#readme",
+  "bugs": {
+    "url": "https://github.com/diyao/qq-sheet/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "node-xlsx": "^0.15.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^7.4.1",
+    "mocha": "^6.2.0",
+    "nyc": "^14.1.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diyao/qq-sheet.git"
+  }
+}
