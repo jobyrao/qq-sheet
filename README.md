@@ -16,14 +16,16 @@ const path = require('path');
 
 const qqSheetUrl = 'https://docs.qq.com/sheet/BqI21X2yZIht1487cQ1mHxFy1TyDtE4E6MIS0zk6GT2sYPhU2IQmKC2Cjyb92FLz9g0PQHVH22S2IO11cq4u0';
 // Example 1
-// An xlsx file will be generated and the file path will be returned.
 const qqSheet1 = new QQSheet(qqSheetUrl, {filepath: path.join(__dirname, 'qqSheet.xlsx')});
-const xlsxFilePath = qqSheet1.parse();
+qqSheet1.parse().then(xlsxFilePath => {
+  // An xlsx file will be generated and the file path will be returned.
+});
 
 // Example 2
-// Returns an array in which each item represents a worksheet.
 const qqSheet2 = new QQSheet(qqSheetUrl);
-const qqSheetData = qqSheet2.parse();
+qqSheet2.parse().then(qqSheetData => {
+  // Returns an array in which each item represents a worksheet.
+});
 ```
 
 ## Tips
